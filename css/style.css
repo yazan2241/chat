@@ -1,0 +1,27 @@
+/* 
+    orange : #F2B237
+    lightBlue : #31C4BE
+    black : #1F3540
+*/
+
+.dark-background {
+    background-color: #1F3540;
+}
+.orange-background {
+    background-color: #F2B237;
+}
+.blue-background {
+    background-color: #31C4BE;
+}
+
+.custom-bar::-webkit-scrollbar {
+    width: 6px;
+  }
+.custom-bar::-webkit-scrollbar-track {
+    background: #1F3540;
+}
+
+.custom-bar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 16px;
+}
