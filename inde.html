@@ -3,25 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     
       </script>
 </head>
 <body>
-    <div class="flex h-screen w-screen ">
-        <div class="flex flex-col items-start dark-background justify-center w-full sm:w-1/2 md:3/8 lg:w-1/3 h-full">
-            <div class="flex h-full w-full custom-bar overflow-y-scroll data snap-y bg-scroll flex-col-reverse">
-               
-            </div>
-            <div class="w-full flex px-3 gap-4 bg-[#2F4550]">
-                <input type="text" id="message" name="message" class="rounded m-2 bg-inherit text-white border-none h-[40px] w-full focus:outline-none" placeholder="write message here" />
-               <button class="px-4 my-2 dark-background rounded text-[#31C4BE] font-bold">C</button>
-               <button onclick="addMessage()" class="px-4 my-2 orange-background rounded text-white font-bold">Send</button>
-            </div>
-        </div>
+    <div class="flex h-screen w-screen videowrapper">
+
+        <video
+            id="my-video"
+            class="video-js h-full w-full"
+            controls
+            preload="auto"
+            width="100%"
+            height="100%"
+            poster="images/poster.jpg"
+            data-setup="{}"
+        >
+            <source src="videos/viking.mp4" type="video/mp4" />
+            <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank"
+            >supports HTML5 video</a
+            >
+          </p>
+        </video>
+        
+      
+  
+    <div id="chat1" class="chatItem hidden rounded-full w-12 custom-z-full absolute top-[32px] right-[32px]">
+      <img src="images/profile.png" class="rounded-full w-12 bg-[#31C4BE] p-[1px]" />
     </div>
+    
+    <div id="chat" class="hidden absolute custom-z-full flex flex-col items-start dark-background justify-center w-1/2 sm:w-2/5 md:w-3/8 lg:w-1/3 h-[400px] right-[8px] sm:right-[16px] top-[90px] rounded-xl overflow-hidden">
+        <div class="flex h-full w-full custom-bar overflow-y-scroll data snap-y bg-scroll flex-col-reverse">
+            
+      </div>
+      <div class="w-full flex px-3 gap-4 bg-[#2F4550]">
+          <input type="text" id="message" name="message" class="rounded m-2 bg-inherit text-white border-none h-[40px] w-full focus:outline-none" placeholder="write message here" />
+          <button onclick="addMessage()" class="px-4 my-2 orange-background rounded text-white font-bold">Send</button>
+      </div>
+  </div>
+</div>
+
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
